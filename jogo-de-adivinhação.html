@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="./style.css" rel='stylesheet' type="text/css">
+        <title>Jogo da Adivinhação Tosco</title>
+
+        <body>
+
+            <nav>
+                <ul>
+                    <li>
+                        <button id='novaPartida'>Nova Partida</button>
+                    </li>
+                    <li>
+                        <button id='zerarPontuacao'> Zerar Pontuação</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <section>
+                <p>Sua Pontuação:<span id ='pontuacao'>0</span></p>
+            </section>
+
+            <section id="jogo">
+                <label for='jogador'>Jogador</label>
+                <input id='jogador' type="number" min ="0" max="10">
+                <button id='enviar' onclick="vencedor();">Enviar</button>            
+            </section>
+
+            <section>
+                <p>O numero é: <span id="computador"></span> </p>
+            </section>
+
+            <script type="text/javascript" src='./script.js'></script>
+        </body>
+    </head>
+</html>

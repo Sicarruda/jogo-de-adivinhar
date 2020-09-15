@@ -1,0 +1,47 @@
+body{
+    border: black solid 1px;
+    background: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    padding: 20px;
+}
+
+nav{
+    border: solid red 1px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+    
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+li{
+    display: inline-block;
+}
+
+button{ 
+    border-radius: 3px;
+    border: transparent 1px;
+    font-size:25px ;
+}
+#enviar{
+    border-radius: 3px;
+    border: transparent 1px;
+    font-size:20px ;
+}
+label{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+input{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+button:hover{
+    color: white;
+    background: black;
+}
