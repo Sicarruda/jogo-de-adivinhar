@@ -8,31 +8,31 @@
         <title>Jogo da Adivinhação Tosco</title>
 
         <body>
-
-            <nav>
-                <ul>
-                    <li>
-                        <button id='zerarPontuacao' onclick='zerarPontuacao();'>
-                            Zerar Pontuação
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-
             <section>
-                <p>Sua Pontuação:<span id ='pontuacao'>0</span></p>
-            </section>
+                <nav>
+                    <ul>
+                        <li>
+                            <button id='zerarPontuacao' onclick='zerarPontuacao();'>
+                                Zerar Pontuação
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
 
-            <section id="jogo">
-                <label for='jogador'>Jogador</label>
-                <input id='jogador' type="number" min ="0" max="10">
-                <button id='enviar' onclick="vencedor();">Enviar</button>            
-            </section>
+                <section>
+                    <p>Sua Pontuação:<span id ='pontuacao'>0</span></p>
+                </section>
 
-            <section>
-                <p>O numero é: <span id="computador"></span> </p>
-            </section>
+                <section id="jogo">
+                    <label for='jogador'>Jogador</label>
+                    <input id='jogador' type="number" min ="0" max="10">
+                    <button id='enviar' onclick="vencedor();">Enviar</button>            
+                </section>
 
+                <section>
+                    <p>O numero é: <span id="computador"></span> </p>
+                </section>
+            </section>
             <script type="text/javascript" src='./script.js'></script>
         </body>
     </head>
