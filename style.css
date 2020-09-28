@@ -23,20 +23,24 @@ ul{
 }
 
 button{ 
-    border-radius: 25px;
+    border-radius: 10px;
     border: transparent 1px;
     font-size:25px ;
 }
 #enviar{
-    border-radius: 25px;
+    border-radius: 10px;
     border: transparent 1px;
     font-size:20px ;
 }
 label{
     font-size: 25px;
+    border-radius: 10px;
 }
 input{
     font-size: 20px;
+    border-radius: 10px;
+    width:50px;
+    text-align: center;
 }
 button:hover{
     color: white;
