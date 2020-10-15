@@ -34,16 +34,14 @@
                     <label for='jogador'>Jogador</label>
                     <input id='jogador' type="text">
                     <button id='enviar' onclick="compararResposta(document.getElementById('jogador').value)">Enviar</button>
-                    <button id="ajuda" onclick="">Dica</button>            
+                    <button id="ajuda" onclick="darDica()">Dica</button>            
                 </section>
                 <section id="dica">
                     <nav>
                         <ul>
-                            <li> <p>dica 01</p> </li>
-                            <li> <p>dica 02</p> </li>
-                            <li> <p>dica 03</p> </li>
-                            <li> <p>dica 04</p> </li>
-                            <li> <p>dica 05</p> </li>
+                            <li> <p> <span id="dica01">dica 01:</span></p> </li>
+                            <li> <p> <span id="dica02">dica 02:</span></p> </li>
+                            <li> <p> <span id="dica03">dica 03:</span></p> </li>
                         </ul>
                     </nav>
                 </section>
