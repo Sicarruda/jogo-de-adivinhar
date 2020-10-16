@@ -18,22 +18,22 @@
         margin:5px;
         padding: 5px;
         border-radius: 10px;
-        
     }
     
     h3{
         text-align: center;
     }
-
+    .zerarPontuacao{
+        list-style-type: none;
+    }
     nav{
         margin: 10px;
     }
     
-    ul{
-        list-style-type: none;
-        padding: 0;
+    #dica{
+        
+        padding:0px;
     }
-    
     button{ 
         border-radius: 10px;
         border: transparent 1px;
