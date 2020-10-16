@@ -1,41 +1,43 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <link href="./adivinha-numero.css" rel='stylesheet' type="text/css">
-        <title>Advinhar número</title>
+<head>
 
-        <body>
-            <h1>Jogos bobos</h1>
-            <section id="adivinharNumero">
-                <h3>Adivinhar número</h3>
-                <nav>
-                    <ul>
-                        <li>
-                            <button id='zerarPontuacao' onclick='zerarPontuacao();'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="./adivinha-numero.css" rel='stylesheet' type="text/css">
+    <title>Advinhar número</title>
+
+    <body>
+        <h1>Jogos bobos</h1>
+        <section id="adivinharNumero">
+            <h3>Adivinhar número</h3>
+            <nav>
+                <ul>
+                    <li>
+                        <button id='zerarPontuacao' onclick='zerarPontuacao();'>
                                 Zerar Pontuação
                             </button>
-                        </li>
-                    </ul>
-                </nav>
+                    </li>
+                </ul>
+            </nav>
 
-                <section>
-                    <p>Sua Pontuação:<span id ='pontuacao'>0</span></p>
-                </section>
-
-                <section id="jogo">
-                    <label for='jogador'>Jogador</label>
-                    <input id='jogador' type="text" min ="0" max="10">
-                    <button id='enviar' onclick="vencedor();">Enviar</button>            
-                </section>
-
-                <section>
-                    <p>O numero é: <span id="computador"></span> </p>
-                </section>
+            <section>
+                <p>Sua Pontuação:<span id='pontuacao'>0</span></p>
             </section>
-            <script type="text/javascript" src='./adivinha-numero.js'></script>
-        </body>
-    </head>
+
+            <section id="jogo">
+                <label for='jogador'>Jogador</label>
+                <input id='jogador' type="text" min="0" max="10">
+                <button id='enviar' onclick="vencedor();">Enviar</button>
+            </section>
+
+            <section>
+                <p>O numero é: <span id="computador"></span> </p>
+            </section>
+        </section>
+        <script type="text/javascript" src='./adivinha-numero.js'></script>
+    </body>
+</head>
+
 </html>
