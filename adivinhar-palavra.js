@@ -10,6 +10,9 @@ var pontuacao = 0;
 var tentativas = document.getElementById('tentativas');
 var tentativasJogador = 6
 var larguraPalavra = document.getElementById("larguraPalavra")
+var darDica1 = document.getElementById("dica01");
+var darDica2 = document.getElementById("dica02");
+var darDica3 = document.getElementById("dica03");
 
 var listaPalavras = [
     { nome: "ave", dica1: "Vertebrado ovíparo", dica2: "Coberto de penas", dica3: "Tem assas" },
@@ -66,22 +69,36 @@ function compararResposta(respostaJogador) {
 larguraPalavra.innerHTML = palavraSorteada.nome.length;
 
 function darDica() {
-    if (dicas == 0) {
+    if (dicas == 0 && fimDoJogo != true) {
         dicas = dicas + 1;
         zerarTentativas();
-        var darDica1 = document.getElementById("dica01");
+
         darDica1.innerHTML = palavraSorteada.dica1;
-    } else if (dicas == 1) {
+    } else if (dicas == 1 && fimDoJogo != true) {
         dicas = dicas + 1;
         zerarTentativas();
-        var darDica2 = document.getElementById("dica02");
+
         darDica2.innerHTML = palavraSorteada.dica2;
-    } else if (dicas == 2) {
+    } else if (dicas == 2 && fimDoJogo != true) {
         dicas = dicas + 1;
         zerarTentativas();
-        var darDica3 = document.getElementById("dica03");
+
         darDica3.innerHTML = palavraSorteada.dica3;
     } else {
         dicas = 0;
     }
+}
+
+function novaPartida() {
+    var novaPalavraSorteada = sortearPalavra(listaPalavras);
+    palavraSorteada = novaPalavraSorteada;
+    tentativas.innerHTML = 6;
+    tentativasJogador = 6;
+    darDica1.innerHTML = "dica 01:";
+    darDica2.innerHTML = "dica 02:";
+    darDica3.innerHTML = "dica 03:";
+    palavraCorreta.innerHTML = "";
+    larguraPalavra.innerHTML = palavraSorteada.nome.length;
+    dicas = 0;
+    fimDoJogo = false;
 }
