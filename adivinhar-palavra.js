@@ -1,4 +1,4 @@
-function zerarPontuacao(){
+function zerarPontuacao() {
     placar.innerHTML = 0;
     pontuacao = 0
 }
@@ -6,55 +6,58 @@ function zerarPontuacao(){
 var fimDoJogo = false;
 var dicas = 0;
 var placar = document.getElementById('pontuacao');
-var pontuacao = 0; 
+var pontuacao = 0;
 var tentativas = document.getElementById('tentativas');
 var tentativasJogador = 6
 var larguraPalavra = document.getElementById("larguraPalavra")
 
-var listaPalavras = [ave = {nome:"ave", dica1:"Vertebrado ovíparo", dica2:"Coberto de penas", dica3:"Tem assas"},
-nave = {nome:"nave", dica1:"Veículo astronáutico interplanetário", dica2:"Trasporta astronautas", dica3:"Leva coisas para fora da orbita"},
-casa = {nome:"casa", dica1:"Construção em alvenaria usada para morar", dica2:"Sinonimo de lar", dica3:"Habitação"},
-canivete={nome:"canivete", dica1:"Pequena faca de bolso", dica2:"Usada em acampamentos", dica3:"Com muitas funções"},
-bruma={nome:"bruma", dica1:"Nebulosidade causada por gotículas de água que ficam suspensas e diminuem a visibilidade", dica2:"Nevoeiro", dica3:"O que dificulta o entendimento claro de alguma coisa"},
-pai={nome:"pai", dica1:"Genitor",dica2:"Aquele que tem ou teve filho(s)", dica3:"... Nosso, oração"},
-anjo={nome:"anjo", dica1:"Ser puramente espiritual", dica2:"Transmite mensagens espirituais às pessoas na Terra", dica3:"Ser anjelical"},
-cachorro={nome:"cachorro", dica1:"Melhor amigo do homem", dica2:"Animal de 4 patas", dica3:"indivíduo desprezível"},
-folha={nome:"folha", dica1:"Órgão de respiração das plantas",dica2:"que produz fotossíntese", dica3:"Geralmente verde"},
-internet={nome:"internet", dica1:"Rede de computadores através da qual é possível conectar e interligar computadores ao redor do mundo", dica2:"Usada para acessar o Facebook", dica3:"Proporciona Wi-Fi"}];
+var listaPalavras = [
+    { nome: "ave", dica1: "Vertebrado ovíparo", dica2: "Coberto de penas", dica3: "Tem assas" },
+    { nome: "nave", dica1: "Veículo astronáutico interplanetário", dica2: "Trasporta astronautas", dica3: "Leva coisas para fora da orbita" },
+    { nome: "casa", dica1: "Construção em alvenaria usada para morar", dica2: "Sinonimo de lar", dica3: "Habitação" },
+    { nome: "canivete", dica1: "Pequena faca de bolso", dica2: "Usada em acampamentos", dica3: "Com muitas funções" },
+    { nome: "bruma", dica1: "Nebulosidade causada por gotículas de água que ficam suspensas e diminuem a visibilidade", dica2: "Nevoeiro", dica3: "O que dificulta o entendimento claro de alguma coisa" },
+    { nome: "pai", dica1: "Genitor", dica2: "Aquele que tem ou teve filho(s)", dica3: "... Nosso, oração" },
+    { nome: "anjo", dica1: "Ser puramente espiritual", dica2: "Transmite mensagens espirituais às pessoas na Terra", dica3: "Ser anjelical" },
+    { nome: "cachorro", dica1: "Melhor amigo do homem", dica2: "Animal de 4 patas", dica3: "indivíduo desprezível" },
+    { nome: "folha", dica1: "Órgão de respiração das plantas", dica2: "que produz fotossíntese", dica3: "Geralmente verde" },
+    { nome: "internet", dica1: "Rede de computadores através da qual é possível conectar e interligar computadores ao redor do mundo", dica2: "Usada para acessar o Facebook", dica3: "Proporciona Wi-Fi" }
+];
 
 var palavraCorreta = document.getElementById("palavraCorreta");
 
-function zerarTentativas(){
-    if(tentativasJogador > 0){
-    tentativasJogador = tentativasJogador - 1;
-    return tentativas.innerHTML = tentativasJogador;
+function zerarTentativas() {
+    if (tentativasJogador > 0) {
+        tentativasJogador = tentativasJogador - 1;
+        return tentativas.innerHTML = tentativasJogador;
     }
 }
 
-function numeroAleatorio(array){
+function numeroAleatorio(array) {
     var conta = Math.floor(Math.random() * array.length + 1);
     return conta;
 }
 
-function sortearPalavra(array){
+function sortearPalavra(array) {
     var palavraAleatoria = numeroAleatorio(array)
     return array[palavraAleatoria];
 }
 
+
 var palavraSorteada = sortearPalavra(listaPalavras);
 
-function compararResposta(respostaJogador){
-    if(fimDoJogo){
+function compararResposta(respostaJogador) {
+    if (fimDoJogo) {
         return;
     }
-    if(respostaJogador == palavraSorteada.nome){
+    if (respostaJogador == palavraSorteada.nome) {
         pontuacao = pontuacao + 1;
         placar.innerHTML = pontuacao;
         palavraCorreta.innerHTML = palavraSorteada.nome;
         fimDoJogo = true;
-    }else if(respostaJogador != palavraSorteada.nome && tentativasJogador >= 1){
+    } else if (respostaJogador != palavraSorteada.nome && tentativasJogador >= 1) {
         zerarTentativas();
-    }else{
+    } else {
         palavraCorreta.innerHTML = palavraSorteada.nome;
         fimDoJogo = true;
     }
@@ -62,24 +65,23 @@ function compararResposta(respostaJogador){
 
 larguraPalavra.innerHTML = palavraSorteada.nome.length;
 
-function darDica(){
-    if(dicas == 0){
+function darDica() {
+    if (dicas == 0) {
         dicas = dicas + 1;
         zerarTentativas();
         var darDica1 = document.getElementById("dica01");
         darDica1.innerHTML = palavraSorteada.dica1;
-    }else if(dicas == 1){
+    } else if (dicas == 1) {
         dicas = dicas + 1;
         zerarTentativas();
         var darDica2 = document.getElementById("dica02");
         darDica2.innerHTML = palavraSorteada.dica2;
-    }else if(dicas == 2){
+    } else if (dicas == 2) {
         dicas = dicas + 1;
         zerarTentativas();
         var darDica3 = document.getElementById("dica03");
         darDica3.innerHTML = palavraSorteada.dica3;
-    }else{
+    } else {
         dicas = 0;
     }
 }
-
