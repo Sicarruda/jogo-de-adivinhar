@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="./tiro-ao-alvo.css" rel="stylesheet" type="text/css" />
+    <title>Tiro ao alvo</title>
+
+    <body>
+      <h1>Jogos bobos</h1>
+      <h3>Tiro ao Alvo</h3>
+      <section id="tiroAoAlvo">
+        <nav>
+          <ul>
+            <li>
+              <button id="zerarPontuacao" onclick="zerarPontuacao()">
+                Zerar Pontuação
+              </button>
+            </li>
+            <li>
+              <p>Sua Pontuação:<span id="pontuacao">0</span></p>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <script src="lib/p5.min.js"></script>
+      <script src="Bolinha.mjs"></script>
+      <script type="text/javascript" src="./tiro-ao-alvo.js"></script>
+    </body>
+  </head>
+</html>

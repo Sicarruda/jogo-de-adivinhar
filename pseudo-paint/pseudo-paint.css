@@ -1,0 +1,31 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  border: black solid 1px;
+  font-size: 25px;
+  padding: 0px;
+  background-color: rgb(214, 155, 79);
+}
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+img{
+  width: 25px;
+  height: 25px;
+}
+button{
+  padding: 0px;
+  border: 0;
+  
+
+}
+button:hover{
+  color: white;
+  background: black;
+}

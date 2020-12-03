@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="./pseudo-paint.css" rel="stylesheet" type="text/css" />
+    <title>Advinhar número</title>
+
+    <body>
+      <h1>Jogos bobos</h1>
+
+      <section id="pseudoPaint">
+        <h3>Pseudo Paint</h3>
+      </section>
+      <section id="barraFerramentas">
+        <button class="forma" onclick="usarQuadrado()">
+          <img src="img/quadrado.png" />
+        </button>
+        <button class="forma" onclick="usarElipse()">
+          <img src="img/elipse.png" />
+        </button>
+        <button class="forma" onclick="usarLinha()">
+          <img src="img/linha.png" />
+        </button>
+        <button class="cor" onclick="usarCor('#FF0000')">
+          <img src="img/vermelho.png" />
+        </button>
+        <button class="cor" onclick="usarCor('#FFFF00')">
+          <img src="img/amarelo.png" />
+        </button>
+        <button class="cor" onclick="usarCor('#3ADF00')">
+          <img src="img/verde.png" />
+        </button>
+        <button class="cor" onclick="usarCor('#0000FF')">
+          <img src="img/azul.png" />
+        </button>
+        <button class="cor" onclick="usarCor('#000000')">
+          <img src="img/preto.png" />
+        </button>
+        <button class="cor" onclick="usarCor('#FFFFFF')">
+          <img src="img/branco.png" />
+        </button>
+        <button class="borracha" onclick="usarBorracha()">borracha</button>
+        <button class="pincel" onclick="usarPincel()">pincel</button>
+        <button class="lapis" onclick="usarLapis()">lapis</button>
+        <button class="tamanho" onclick="aumentarLinha(1)">1</button>
+        <button class="tamanho" onclick="aumentarLinha(2)">2</button>
+        <button class="tamanho" onclick="aumentarLinha(3)">3</button>
+      </section>
+
+      <script src="lib/p5.min.js"></script>
+      <script src="Quadrado.mjs"></script>
+      <script type="text/javascript" src="./pseudo-paint.js"></script>
+    </body>
+  </head>
+</html>
